@@ -13,9 +13,5 @@
     <ProjectReference Include="..\Common\Common.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Content Include=".github\workflows\master_apilab3.yml" />
-  </ItemGroup>
-
 
 </Project>
