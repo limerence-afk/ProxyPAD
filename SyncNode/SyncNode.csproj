@@ -8,5 +8,9 @@
     <ProjectReference Include="..\Common\Common.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include=".github\workflows\master_syncnode.yml" />
+  </ItemGroup>
+
 
 </Project>
