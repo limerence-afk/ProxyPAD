@@ -57,8 +57,8 @@ jobs:
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1E882DEFD9974F60B3376680730C92FB }}
           package: .
 
-      - name: Deploy to Azure Web App
-        id: deploy-to-webapp
+      - name: Deploy to Azure Web App 2
+        id: deploy-to-webapp2
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'api2lab3'
