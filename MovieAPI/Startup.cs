@@ -43,12 +43,6 @@ namespace MovieAPI
             services.AddScoped<IMongoRepository<Movie>, MongoRepository<Movie>>();
             services.AddScoped<ISyncService<Movie>, SyncService<Movie>>();
 
-            services.AddCors(option =>
-            {
-                option.AddPolicy("CorsPolicy",
-                    policy => { policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4200/"); });
-            });
-
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -78,7 +72,6 @@ namespace MovieAPI
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Lab2.Warehouse v1"));
 
             app.UseRouting();
-            app.UseCors("CorsPolicy");
 
             app.UseAuthorization();
 
