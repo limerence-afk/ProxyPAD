@@ -59,8 +59,6 @@ namespace MovieAPI
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILogger<Startup> logger)
         {
-            if (env.IsDevelopment())
-            {
                 app.Use(async (context, next) =>
                 {
                     logger.LogDebug("[{Now}] {Method} {Scheme}://{Host}{Path}",
@@ -71,6 +69,8 @@ namespace MovieAPI
                         context.Request.Path);
                     await next.Invoke();
                 });
+            if (env.IsDevelopment())
+            {
                 app.UseDeveloperExceptionPage();
             }
 
