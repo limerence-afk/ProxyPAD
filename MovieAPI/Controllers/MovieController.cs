@@ -12,7 +12,6 @@ using System.Threading.Tasks;
 namespace MovieAPI.Controllers
 {
     [Route("api/[controller]")]
-    [EnableCors("CorsPolicy")]
     [ApiController]
     public class MovieController : ControllerBase
     {
