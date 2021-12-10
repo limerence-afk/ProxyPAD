@@ -24,7 +24,7 @@ namespace SyncNode.Controllers
         public IActionResult Sync(SyncEntity entity)
         {
             _workJobService.AddItem(entity);
-
+//komment
             return Ok();
         }
     }
